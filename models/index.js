@@ -1,12 +1,7 @@
 const Sequelize = require("sequelize");
 require("dotenv").config();
 
-const sequelize = new Sequelize(
-  `mysql://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}:3306/${process.env.DB_NAME}`,
-  {
-    dialect: "mysql",
-  }
-);
+const sequelize = require("../config/database");
 
 // Import models
 const User = require("./users")(sequelize, Sequelize.DataTypes);
@@ -24,4 +19,4 @@ Attendance.belongsTo(User, { foreignKey: "userId" });
 User.hasMany(Payroll, { foreignKey: "userId" });
 Payroll.belongsTo(User, { foreignKey: "userId" });
 
-module.exports = { sequelize, User, UserProfile, Attendance, Payroll };
+module.exports = { User, UserProfile, Attendance, Payroll };

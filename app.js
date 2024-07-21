@@ -11,8 +11,7 @@ var usersRouter = require("./routes/users");
 var attendanceRouter = require("./routes/attendance");
 var payrollRouter = require("./routes/payroll");
 var authRouter = require("./routes/auth");
-
-const { sequelize } = require("./models/index");
+const sequelize = require("./config/database");
 
 var app = express();
 
