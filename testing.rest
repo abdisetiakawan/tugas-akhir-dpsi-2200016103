@@ -1,0 +1,90 @@
+### Menguji POST /auth/register
+POST https://abdisetiawan-dpsi.vercel.app/auth/register
+Content-Type: application/json
+
+{
+  "username": "rickykomtok",
+  "password": "password123",
+  "role": "admin"
+}
+
+### Menguji POST /auth/login
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "rickykomtok",
+  "password": "password123"
+}
+
+### Menguji GET /attendance
+GET http://localhost:3000/attendance
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDJhYzEzNS05NTcwLTRmMzItYTE5Mi0yYzFlYmU2OGU4MTQiLCJ1c2VybmFtZSI6InJpY2t5a29tdG9rIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIxNTM2NjQwLCJleHAiOjE3MjE1NDAyNDB9.PDVvdkQiEtqbi6rd2Fg-Wgl5tFEgZc-5Yt1su1Q_TXU
+
+### Menguji POST /attendance
+POST http://localhost:3000/attendance
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5NDQ3NzFkMS03YmE1LTQxOGEtYmRkNy0wZThlNDE0YmZlYTMiLCJ1c2VybmFtZSI6Im5hcnV0b2pyIiwicm9sZSI6Imthcnlhd2FuIiwiaWF0IjoxNzIwMzI2NzkwLCJleHAiOjE3MjAzMzAzOTB9.HXCTLO7leQL8H0WTYBzfDFUUa0W_gFXczj5qV7ED9y8
+Content-Type: application/json
+
+{
+  "date": "2025-07-05",
+  "status": "Present"
+}
+
+### Menguji PUT /attendance/
+PUT http://localhost:3000/attendance/update
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlMGMyNjA5My01ZmZkLTQwY2YtYWY4NS02YWVkMmIwMWEwMmEiLCJ1c2VybmFtZSI6ImFiZGkiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjAzMzA2NTEsImV4cCI6MTcyMDMzNDI1MX0.FXFTmyyJUgdS4cl_IlvJayaUhrsj6nnpwyhxgrFglnw
+Content-Type: application/json
+
+{
+  "id": "65979df7-1783-47ef-9348-a509edcfa34d",
+  "status": "leave"
+}
+
+### Menguji DELETE /attendance/delete
+DELETE http://localhost:3000/attendance/delete
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlMGMyNjA5My01ZmZkLTQwY2YtYWY4NS02YWVkMmIwMWEwMmEiLCJ1c2VybmFtZSI6ImFiZGkiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjAzMzA2NTEsImV4cCI6MTcyMDMzNDI1MX0.FXFTmyyJUgdS4cl_IlvJayaUhrsj6nnpwyhxgrFglnw
+Content-Type: application/json
+
+{
+  "id": "65979df7-1783-47ef-9348-a509edcfa34d"
+}
+### Menguji GET /payroll
+GET http://localhost:3000/payroll
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlMGMyNjA5My01ZmZkLTQwY2YtYWY4NS02YWVkMmIwMWEwMmEiLCJ1c2VybmFtZSI6ImFiZGkiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjAzNzI4MjYsImV4cCI6MTcyMDM3NjQyNn0.9iRF3GaH9enuHHSl_Ue2BHu5gkPC_40o-pPqN4VSGvk
+
+### Menguji POST /payroll
+POST http://localhost:3000/payroll
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlMGMyNjA5My01ZmZkLTQwY2YtYWY4NS02YWVkMmIwMWEwMmEiLCJ1c2VybmFtZSI6ImFiZGkiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjAzNzI4MjYsImV4cCI6MTcyMDM3NjQyNn0.9iRF3GaH9enuHHSl_Ue2BHu5gkPC_40o-pPqN4VSGvk
+Content-Type: application/json
+
+{
+  "userId": "dda67e56-c215-40e8x-9f41-bd66838974cf",
+  "month": 4,
+  "year": 2024,
+  "salary": 6500
+}
+
+### Menguji GET /users
+GET http://localhost:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjMmFmYTMwZS05OTRjLTRkZDAtYTQ4MC02N2RhYWY3MWRmYjQiLCJ1c2VybmFtZSI6ImFiZGkiLCJyb2xlIjoia2FyeWF3YW4iLCJpYXQiOjE3MjAyNDIzODAsImV4cCI6MTcyMDI0NTk4MH0.e6JvwCvDDreISITzwjz1A2HFMeAomoHUoQ73_KUb1RM
+
+### Menguji PUT /users/profile
+PUT http://localhost:3000/users/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJmZTcwZWE5Mi0xNjU1LTQyOGUtOGQzZi1mNjljODc3ZDQwMmIiLCJ1c2VybmFtZSI6IndpZHdpZDEyMyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMDI4NjI1NiwiZXhwIjoxNzIwMjg5ODU2fQ.MXy_0rZR3ihgdsVUpiTT13aS570aIjLIbnm_udo5m-w
+Content-Type: application/json
+
+{
+  "firstName": "abdi",
+  "lastName": "kontol",
+  "email": "akmffjd@examplsde.com",
+  "phoneNumber": "1234561789",
+  "address": "123 Stresdet, City",
+  "dateOfBirth": "1090-01-01",
+  "position": "asdfasdf"
+}
+
+
+### Menguji endpoint show karyawan Payroll
+GET http://localhost:3000/payroll/show
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJkZGE2N2U1Ni1jMjE1LTQwZTgtOWY0MS1iZDY2ODM4OTc0Y2YiLCJ1c2VybmFtZSI6Inp1bCIsInJvbGUiOiJrYXJ5YXdhbiIsImlhdCI6MTcyMDI5MDkzMSwiZXhwIjoxNzIwMjk0NTMxfQ.m_pDwNvuJ1U23IYjWpSrlFWCxoLKyNz_D7Epp2_OP40
