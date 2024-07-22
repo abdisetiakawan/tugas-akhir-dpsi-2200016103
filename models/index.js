@@ -1,7 +1,7 @@
 const Sequelize = require("sequelize");
 require("dotenv").config();
 
-const sequelize = require("../config");
+const sequelize = require("../config/index");
 
 // Import models
 const User = require("./users")(sequelize, Sequelize.DataTypes);
