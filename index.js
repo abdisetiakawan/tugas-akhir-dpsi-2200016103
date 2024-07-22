@@ -20,7 +20,7 @@ var usersRouter = require("./routes/users");
 var attendanceRouter = require("./routes/attendance");
 var payrollRouter = require("./routes/payroll");
 var authRouter = require("./routes/auth");
-const sequelize = require("./config/database");
+const sequelize = require("./config/");
 
 app.use(logger("dev"));
 app.use(express.json());

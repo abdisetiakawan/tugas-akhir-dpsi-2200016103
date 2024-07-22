@@ -1,8 +1,8 @@
-const { v4: uuidv4 } = require('uuid');
-const { User } = require('./index');
+const { v4: uuidv4 } = require("uuid");
+const { User } = require("./index");
 
 const Payroll = (sequelize, DataTypes) => {
-  return sequelize.define('Payroll', {
+  return sequelize.define("Payroll", {
     id: {
       type: DataTypes.STRING,
       primaryKey: true,
@@ -14,8 +14,8 @@ const Payroll = (sequelize, DataTypes) => {
       allowNull: false,
       references: {
         model: User,
-        key: 'id',
-      }
+        key: "id",
+      },
     },
     month: {
       type: DataTypes.INTEGER,
